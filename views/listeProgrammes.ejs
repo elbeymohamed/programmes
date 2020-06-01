@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="bootstrap-4-1/bootstrap.min.css" type="text/css" rel="stylesheet" />
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+    <title>liste des programmes</title>
+</head>
+<body>
+    <h1 align="center" class="panel-heading">Liste des programmes</h1>
+	<table cellspacing="3" cellpadding="3" border="1" width="70%" align="center">
+	<tr align="center" class="panel-heading" background-color="#A22B2D">
+	<td>Code</td>
+	<td>Titre</td>
+	<td>Description</td>
+	<td>College</td>
+	<td>Date Seance</td>
+	</tr>
+	 <% progs.forEach(function(progs) { %>
+	 <tr align="center">
+	<td><%= progs.code %></td>
+	<td><%= progs.titre %></td>
+	<td><%= progs.description%></td>
+	<td><%= progs.college%></td>
+	<td><%= progs.dateSeance.toDateString()%></td>
+	 <% }); %>
+	</tr>
+	 </table>
+			<br>
+			 <a href="/">Home</a>
+</body>
+</html>
